@@ -2,27 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>@ViewBag.Integrante.GetNombre()</h1>
-<img src="@ViewBag.Integrante.GetFoto()"/>
-
-<p>DNI: @ViewBag.Integrante.GetDni()</p>
-<p>Fecha: @ViewBag.Integrante.GetFechaNacimiento()</p>
-
-<h3>Familiares</h3>
-<ul>
-    @foreach (string f in ViewBag.Integrante.GetFamiliares())
-    {
-        <li>@f</li>
-    }
-</ul>
-
-<h3>Intereses</h3>
-<ul>
-    @foreach (string i in ViewBag.Integrante.GetIntereses())
-    {
-        <li>@i</li>
-    }
-</ul>
-
-<a href='@Url.Action("Index")'>Volver</a>
+@foreach (var integrante in ViewBag.Integrantes)
+{ 
+    <div>
+        <p>@integrante.Value.GetNombre()</p>
+        <p>@integrante.Value.GetDni()</p>
+        <p><img src="@integrante.Value.GetFoto()" alt="Foto del integrante" width="100"></p>
+        <a href='@Url.Action("SelectIntegrante", new { dni = integrante.Value.GetDni() })'> Ver información </a>
+    </div>
 }
+

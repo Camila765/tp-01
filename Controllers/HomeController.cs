@@ -23,13 +23,9 @@ public class HomeController : Controller
     {
         Grupo grupo = new Grupo();
         Integrante integrante = grupo.GetIntegrante(dni);
-
         ViewBag.Integrante = integrante;
-        ViewBag.DNI = dni;
-
-        return View("info Integrante");
+        return View();
     }
-    
     public IActionResult Privacy()
     {
         return View();
