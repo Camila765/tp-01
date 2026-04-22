@@ -29,7 +29,7 @@ public class HomeController : Controller
 
         return View("info Integrante");
     }
-
+    
     public IActionResult Privacy()
     {
         return View();
