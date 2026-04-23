@@ -40,5 +40,5 @@ public class Integrante
     {
         return intereses;
     }
-
+    
 }

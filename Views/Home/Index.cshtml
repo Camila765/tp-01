@@ -5,7 +5,7 @@
 @foreach (var integrante in ViewBag.Integrantes)
 { 
     <div>
-        <p>@integrante.Value.GetNombre()</p>
+        <h2><p>@integrante.Value.GetNombre()</p></h2>
         <p>@integrante.Value.GetDni()</p>
         <p><img src="@integrante.Value.GetFoto()" alt="Foto del integrante" width="100"></p>
         <a href='@Url.Action("SelectIntegrante", new { dni = integrante.Value.GetDni() })'> Ver información </a>

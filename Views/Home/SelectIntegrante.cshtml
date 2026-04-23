@@ -2,6 +2,7 @@
     ViewData["Title"] = "Info Integrante";
 }
 <h1>@ViewBag.Integrante.GetNombre()</h1>
+<p>Fecha de nacimiento: @ViewBag.Integrante.GetFechaNacimiento()</p>
 <p>DNI: @ViewBag.Integrante.GetDni()</p>
 <img src="@ViewBag.Integrante.GetFoto()" alt="Foto del integrante" width="200">
 <h3>Familiares</h3>
